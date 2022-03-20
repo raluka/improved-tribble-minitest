@@ -31,4 +31,11 @@ class UserTest < ActiveSupport::TestCase
     assert_includes User.recent, users(:valid)
     refute_includes User.recent, users(:old)
   end
+
+  test '#profile_photo_url' do
+    assert_equal(
+      'https://s.gravatar.com/avatar/d4c74594d841139328695756648b6bd6',
+      @user.profile_photo_url
+    )
+  end
 end
