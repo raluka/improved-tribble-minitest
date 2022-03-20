@@ -22,4 +22,8 @@ class UserTest < ActiveSupport::TestCase
     refute @user.valid?
     assert_not_nil @user.errors[:email]
   end
+
+  test '#posts' do
+    assert_equal 2, @user.posts.size
+  end
 end
