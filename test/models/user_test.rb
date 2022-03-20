@@ -26,4 +26,9 @@ class UserTest < ActiveSupport::TestCase
   test '#posts' do
     assert_equal 2, @user.posts.size
   end
+
+  test '#recent' do
+    assert_includes User.recent, users(:valid)
+    refute_includes User.recent, users(:old)
+  end
 end
