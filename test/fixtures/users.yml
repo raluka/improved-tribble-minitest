@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid:
+  name: John
+  email: john@example.com
+old:
+  name: Old
+  email: old@example.com
+  created_at: <%= 2.weeks.ago %>
